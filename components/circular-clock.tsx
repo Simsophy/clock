@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { Clock3 } from "lucide-react";
 
 import type { Activity } from '@/types/activity';
 

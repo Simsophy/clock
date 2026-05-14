@@ -3,8 +3,8 @@
 import * as React from "react";
 import { PanelLeftIcon } from "lucide-react";
 
-import { useMobile } from "@/hooks/use-mobile";
-import { cn } from "@/libs/utils";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { cn } from "@/lib/utils";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -45,7 +45,7 @@ function SidebarProvider({
   open?: boolean;
   onOpenChange?: (open: boolean) => void;
 }) {
-  const isMobile = useMobile();
+  const isMobile = useIsMobile();
   const [openMobile, setOpenMobile] = React.useState(false);
   const [openState, setOpenState] = React.useState(defaultOpen);
   const open = openProp ?? openState;
